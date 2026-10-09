@@ -1,0 +1,24 @@
+name: Bug report
+description: Report a reproducible issue with Rainforest Cascade.
+title: ""
+labels: [bug]
+body:
+  - type: input
+    id: device
+    attributes:
+      label: Device and Android version
+      placeholder: Fire TV model and Fire OS version
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What happened?
+      description: Include the steps to reproduce and expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant error output
+      description: Remove personal or device identifiers before posting.

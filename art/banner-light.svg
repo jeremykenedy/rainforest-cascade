@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" role="img" aria-labelledby="title desc">
+  <title id="title">Rainforest Cascade</title>
+  <desc id="desc">Animated waterfall for TV screens with no ads, analytics, or tracking.</desc>
+  <defs>
+    <linearGradient id="cliff" x2="0" y2="1"><stop stop-color="#466b50"/><stop offset="1" stop-color="#315547"/></linearGradient>
+    <linearGradient id="water" x2="0" y2="1"><stop stop-color="#e4f1df"/><stop offset="1" stop-color="#4ba5a4"/></linearGradient>
+  </defs>
+  <rect width="800" height="200" rx="16" fill="#fff" stroke="#e5e7eb"/>
+  <text x="40" y="78" fill="#0f172a" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="40" font-weight="700" letter-spacing="-.5">Rainforest Cascade</text>
+  <text x="42" y="108" fill="#64748b" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14">Animated TV screensaver with no ads, analytics, or tracking</text>
+  <g font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="500" text-anchor="middle">
+    <rect x="40" y="130" width="90" height="22" rx="11" fill="#eff6ff" stroke="#93c5fd" stroke-width=".8"/><text x="85" y="144" fill="#1e40af">Android TV</text>
+    <rect x="138" y="130" width="78" height="22" rx="11" fill="#f0fdf4" stroke="#86efac" stroke-width=".8"/><text x="177" y="144" fill="#166534">Fire TV</text>
+    <rect x="224" y="130" width="84" height="22" rx="11" fill="#f5f3ff" stroke="#c4b5fd" stroke-width=".8"/><text x="266" y="144" fill="#6d28d9">Google TV</text>
+  </g>
+  <g transform="translate(610 18)">
+    <path d="M0 0h180v162h-180z" fill="#dff0e4"/>
+    <path d="M0 0h49c-5 23 1 38-4 58-7 23-2 62-8 104h-37zM180 0h-49c5 23-1 38 4 58 7 23 2 62 8 104h37z" fill="url(#cliff)"/>
+    <path d="M48 25c23 7 61 7 84 0-6 43-2 78 7 105-27 18-71 18-98 0 9-34 12-68 7-105z" fill="url(#water)"/>
+    <path d="M59 31v73m20-71v78m25-78v76m20-79v72" stroke="#fff" stroke-opacity=".75" stroke-width="3"/>
+    <path d="M0 128c27-8 52-1 75 4 34 7 61-12 105-10v40h-180z" fill="#387d7a"/>
+    <path d="M47 130c28 9 54 10 82 0" fill="none" stroke="#c0e8d9" stroke-width="2"/>
+  </g>
+</svg>

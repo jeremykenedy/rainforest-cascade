@@ -10,7 +10,13 @@
 - Screensaver component before and after test: `com.androsaver/.ScreensaverService`
 - Screensaver enabled before and after test: `1`
 
-The app installed successfully and its preview and remote-operated settings screens were exercised on this device. The day and night screenshots show the running preview activity. Fire OS does not expose the Android Dream manager service or a supported shell command to start a selected DreamService (`cmd dream help` reports `Can't find service: dream`). A five-minute idle test continued to run the pre-existing Androsaver service, so the `WaterfallDreamService` lifecycle could not be verified on this Fire TV. The original screensaver component and enabled state were restored. The app service is registered in the package manager with the required bind permission. Other Fire OS versions and physical Android TV and Google TV models remain untested.
+The app installed successfully and its preview and remote-operated settings screens were exercised on this device. The day and night screenshots show the running preview activity. Fire OS does not expose the Android Dream manager service or a supported shell command to start a selected DreamService (`cmd dream help` reports `Can't find service: dream`). A five-minute idle test continued to run the pre-existing Androsaver service, so the `WaterfallDreamService` lifecycle could not be verified on this Fire TV. The original screensaver component and enabled state were restored. The app service is registered in the package manager with the required bind permission.
+
+| Platform | Device | Result |
+| --- | --- | --- |
+| Fire TV DreamService activation | AFTDEC012E, Fire OS 11, API 30 | Not verified. We are looking for a Fire TV owner to confirm DreamService selection and idle activation, then report the model, Fire OS/API, resolution, and results in the [issue tracker](https://github.com/jeremykenedy/rainforest-cascade/issues). Preview and settings were tested on this device. |
+| Physical Android TV | Not tested for this release | We are looking for an Android TV owner to test installation, screensaver selection and activation, and remote settings, then report the model, OS/API, resolution, and results in the [issue tracker](https://github.com/jeremykenedy/rainforest-cascade/issues). |
+| Physical Google TV | Not tested for this release | We are looking for a Google TV owner to run the same checks and report the model, OS/API, resolution, and results in the [issue tracker](https://github.com/jeremykenedy/rainforest-cascade/issues). |
 
 ## Runtime and coverage limits
 

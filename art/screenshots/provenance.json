@@ -1,0 +1,176 @@
+{
+  "platform": "Google TV/Android TV emulator API34",
+  "serial": "emulator-5580",
+  "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9",
+  "apk_bytes": 50123900,
+  "capture_scope": "Actual native surfaces; this does not establish physical TV idle activation or sustained performance.",
+  "captures": [
+    {
+      "file": "art/screenshots/forest-wide-view.png",
+      "sha256": "20b642e3ab608c9eb94222775579849bfe5e7bfae83d583de703746c690f203a",
+      "captured_at_utc": "2026-10-16T09:27:10.473750+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "PreviewActivity",
+      "scene": "forest",
+      "scene_license": "CC BY 4.0",
+      "scene_license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "file": "art/screenshots/forest-balanced.png",
+      "sha256": "b4d42da87f6241c1e058ae9c74704c315268a71fe762f495e31a23de988de9d0",
+      "captured_at_utc": "2026-10-16T09:26:44.693116+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "PreviewActivity",
+      "scene": "forest",
+      "scene_license": "CC BY 4.0",
+      "scene_license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "file": "art/screenshots/forest-close-view.png",
+      "sha256": "8765171fc9d67f1ed8b2c393afb9480feaf5fe6f4db0896c84ceea8d0cfd4018",
+      "captured_at_utc": "2026-10-16T09:27:14.708204+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "PreviewActivity",
+      "scene": "forest",
+      "scene_license": "CC BY 4.0",
+      "scene_license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "file": "art/screenshots/stone-wide-view.png",
+      "sha256": "950df918b3b56cc5d6a4d56dac9834cd113ca86e877218abc3b44b48ede5191c",
+      "captured_at_utc": "2026-10-16T09:27:45.214061+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "PreviewActivity",
+      "scene": "stone",
+      "scene_license": "CC BY-SA 4.0",
+      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "art/screenshots/stone-balanced.png",
+      "sha256": "349636ef191bb674e026f7dc9cd48fc422358dd978b36fea17cd48b51823304a",
+      "captured_at_utc": "2026-10-16T09:27:19.686535+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "PreviewActivity",
+      "scene": "stone",
+      "scene_license": "CC BY-SA 4.0",
+      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "art/screenshots/stone-close-view.png",
+      "sha256": "6b44ec0a8e41f032755597bd73fee0f0d42a7324d54a8a8f568c05f1077be265",
+      "captured_at_utc": "2026-10-16T09:27:49.159768+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "PreviewActivity",
+      "scene": "stone",
+      "scene_license": "CC BY-SA 4.0",
+      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "art/screenshots/canyon-wide-view.png",
+      "sha256": "ac40b8109d1097a882b8df739be1c39c5c1a95632100d66b823172f09fa129ff",
+      "captured_at_utc": "2026-10-16T09:28:10.839839+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "PreviewActivity",
+      "scene": "canyon",
+      "scene_license": "CC BY-SA 4.0",
+      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "art/screenshots/canyon-balanced.png",
+      "sha256": "421d914787c4bc959abccf0eceb2497e07f0229fa527dbb307dcd0d3640696ec",
+      "captured_at_utc": "2026-10-16T09:27:54.272259+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "PreviewActivity",
+      "scene": "canyon",
+      "scene_license": "CC BY-SA 4.0",
+      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "art/screenshots/canyon-close-view.png",
+      "sha256": "4d5fdf253a1c200442656169242c7000c83ec083284def064497f90ea85c09b6",
+      "captured_at_utc": "2026-10-16T09:28:14.930376+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "PreviewActivity",
+      "scene": "canyon",
+      "scene_license": "CC BY-SA 4.0",
+      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "art/screenshots/forest-heavy-mist.png",
+      "sha256": "2dc7d1e0adbbfcd41b1d996926cbb526496c4e8b4f60e13ed884590d07763ed2",
+      "captured_at_utc": "2026-10-16T09:28:21.233551+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "PreviewActivity",
+      "scene": "forest",
+      "scene_license": "CC BY 4.0",
+      "scene_license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "file": "art/screenshots/forest-sunlight.png",
+      "sha256": "b966cac2e82599ddf075cdeff9f0962dbd5b323a647dffbbcc6aee541b6f3b51",
+      "captured_at_utc": "2026-10-16T09:28:26.620960+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "PreviewActivity",
+      "scene": "forest",
+      "scene_license": "CC BY 4.0",
+      "scene_license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "file": "art/screenshots/forest-night-heavy-slow.png",
+      "sha256": "65ca0abc25619c62515e3cb3b94b1f1e10bf320bb531536a3d69565455cd4183",
+      "captured_at_utc": "2026-10-16T09:28:34.061223+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "PreviewActivity",
+      "scene": "forest",
+      "scene_license": "CC BY 4.0",
+      "scene_license_url": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "file": "art/screenshots/settings-real-waterfalls.png",
+      "sha256": "eac7c966bd5a301d4ba0215a3166869502476c0defd06ae843436d3b33ab5175",
+      "captured_at_utc": "2026-10-16T09:28:52.995914+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "SettingsActivity"
+    },
+    {
+      "file": "art/screenshots/credits.png",
+      "sha256": "99d69f896e3a6c5ea8d6910f263ef537e519cb6c0d57fd3846c635b229f743d1",
+      "captured_at_utc": "2026-10-16T09:31:02.503327+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "SettingsActivity"
+    },
+    {
+      "file": "art/screenshots/credits-scrolled.png",
+      "sha256": "5c618bc5211526b231037d70cb79426ff114d00617686517b852f9613444a85d",
+      "captured_at_utc": "2026-10-16T09:31:03.861852+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "SettingsActivity"
+    },
+    {
+      "file": "art/screenshots/dream-forest.png",
+      "sha256": "dede9cb1a34ef443a03c3cb7e0e968cfda90ee5b7a306dfd86ba54d5b90e536f",
+      "captured_at_utc": "2026-10-16T09:31:07.071738+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "WaterfallDreamService via nonpersistent test-Dream",
+      "scene": "forest",
+      "scene_license": "CC BY 4.0",
+      "scene_license_url": "https://creativecommons.org/licenses/by/4.0"
+    }
+  ]
+}

@@ -1,24 +1,24 @@
 <p align="center">
-    <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="art/banner-dark.svg">
-        <source media="(prefers-color-scheme: light)" srcset="art/banner-light.svg">
-        <img src="art/banner-light.svg" alt="Rainforest Cascade, animated waterfall screensaver with no ads, analytics, or tracking" width="800">
-    </picture>
+  <a href="https://github.com/jeremykenedy/rainforest-cascade#gh-light-mode-only"><picture><source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="art/banner-mobile-still-light.67fbb8f08d94.svg"><source media="(prefers-reduced-motion: reduce)" srcset="art/banner-still-light.6a7db98249f1.svg"><source media="(max-width: 600px)" srcset="art/banner-mobile-light.27f8b3a886d6.svg"><img src="art/banner-light.a87203b87841.svg#gh-light-mode-only" alt="Rainforest Cascade" width="800"></picture></a>
+  <a href="https://github.com/jeremykenedy/rainforest-cascade#gh-dark-mode-only"><picture><source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="art/banner-mobile-still-dark.d5171576048d.svg"><source media="(prefers-reduced-motion: reduce)" srcset="art/banner-still-dark.254bae11ffa8.svg"><source media="(max-width: 600px)" srcset="art/banner-mobile-dark.442a0ba1f7b1.svg"><img src="art/banner-dark.06a203cdc11a.svg#gh-dark-mode-only" alt="Rainforest Cascade" width="800"></picture></a>
 </p>
 
-<p align="center">An animated waterfall screensaver for Fire TV, Android TV, and Google TV.</p>
+<p align="center">Real waterfalls in forest, stone and canyon landscapes, with quiet atmospheric controls.</p>
 
 <p align="center">
-    <a href="https://github.com/jeremykenedy/rainforest-cascade/releases"><img src="https://img.shields.io/github/v/release/jeremykenedy/rainforest-cascade?label=latest%20release" alt="Latest release"></a>
     <a href="https://github.com/jeremykenedy/rainforest-cascade/releases"><img src="https://img.shields.io/github/downloads/jeremykenedy/rainforest-cascade/total" alt="GitHub release downloads"></a>
+    <a href="https://github.com/jeremykenedy/rainforest-cascade/releases"><img src="https://img.shields.io/github/v/release/jeremykenedy/rainforest-cascade?label=latest%20release" alt="Latest release"></a>
     <a href="https://github.com/jeremykenedy/rainforest-cascade/actions/workflows/ci.yml"><img src="https://github.com/jeremykenedy/rainforest-cascade/actions/workflows/ci.yml/badge.svg" alt="Build, tests, and coverage"></a>
     <a href="https://github.com/jeremykenedy/rainforest-cascade/actions/workflows/style.yml"><img src="https://github.com/jeremykenedy/rainforest-cascade/actions/workflows/style.yml/badge.svg" alt="Code style"></a>
     <a href="https://github.com/jeremykenedy/rainforest-cascade/actions/workflows/docs.yml"><img src="https://github.com/jeremykenedy/rainforest-cascade/actions/workflows/docs.yml/badge.svg" alt="Documentation checks"></a>
     <a href="https://github.com/jeremykenedy/rainforest-cascade/actions/workflows/security.yml"><img src="https://github.com/jeremykenedy/rainforest-cascade/actions/workflows/security.yml/badge.svg" alt="Privacy checks"></a>
     <a href="https://img.shields.io/github/license/jeremykenedy/rainforest-cascade"><img src="https://img.shields.io/github/license/jeremykenedy/rainforest-cascade?label=license" alt="Apache 2.0 license"></a>
-    <a href="https://github.com/sponsors/jeremykenedy"><img src="https://img.shields.io/badge/Sponsor-jeremykenedy-ea4aaa?logo=githubsponsors&logoColor=white" alt="Sponsor"></a>
+</p>
+
+<p align="center">
     <a href="https://github.com/jeremykenedy"><img src="https://img.shields.io/github/followers/jeremykenedy?label=Follow&style=social" alt="Follow jeremykenedy on GitHub"></a>
     <a href="https://github.com/jeremykenedy/rainforest-cascade/stargazers"><img src="https://img.shields.io/badge/Star-this%20repo-yellow?logo=github&style=social" alt="Star this repository"></a>
+    <a href="https://github.com/sponsors/jeremykenedy"><img src="https://img.shields.io/badge/Sponsor-jeremykenedy-ea4aaa?logo=githubsponsors&logoColor=white" alt="Sponsor"></a>
 </p>
 
 ## Table of Contents
@@ -28,6 +28,7 @@
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Configuration](#configuration)
+- [Fire TV Toolkit](#fire-tv-toolkit)
 - [Screenshots](#screenshots)
 - [Building and testing](#building-and-testing)
 - [Documentation](#documentation)
@@ -40,24 +41,20 @@ The app has no ads, analytics, telemetry, diagnostics, crash reporting, or track
 
 ## Features
 
-- A continuously animated waterfall, flowing water, moving pool ripples, and rising mist.
-- Rainforest, mossy stone, and red canyon environments.
-- Day or night lighting, with optional moving sunlight shimmer.
-- Narrow, curtain, and wide waterfall shapes.
-- Slow, natural, and fast water flow.
-- Mist amount, per-setting random choices, and a master random mode.
-- Remote-friendly settings and an app-owned settings provider for host interfaces.
-- No bundled stock footage or third-party visual assets.
+The 1.1.0 source candidate replaces the original painted waterfall. Emulator checks cover the current candidate; physical TV verification remains pending. The latest published release still uses the earlier Canvas renderer.
+
+- Three licensed real moving environments: a wooded cascade, mossy stone falls and a snowy canyon waterfall.
+- Aspect-preserving 1080p footage with wide, balanced and close framing. Camera framing changes the view without stretching water or rocks.
+- Actual slow, natural or fast video playback.
+- Daylight or cool night grading, plus separate added mist and sunlight shimmer.
+- Very slow full-scene drift, per-setting random choices and a master random mode.
+- Existing remote settings and stable host provider, with offline source credits and full application license.
 
 ## Requirements
 
-| Device | Minimum | Tested |
-| --- | --- | --- |
-| Fire TV | Fire OS 7 / Android API 28 | Fire OS 11, API 30, AFTDEC012E |
-| Android TV | Android 6.0 / API 23 | Not tested on a physical Android TV device |
-| Google TV | Android 6.0 / API 23 | Not tested on a physical Google TV device |
+Android API 23 or newer, OpenGL ES 2.0 and H.264 decoding are required. The project targets API 36. The replacement uses 1920x1080 recordings; a 4K panel or higher-resolution original source does not establish native 4K composition.
 
-The project targets Android API 36. The animation uses a native Canvas at the display's available logical resolution. A 4K panel alone does not establish native 4K composition.
+Current native results and the historical Fire TV preview run are distinguished in [device verification](docs/VERIFICATION.md). Physical Fire TV idle activation and sustained replacement-renderer performance remain pending.
 
 ## Installation
 
@@ -73,15 +70,52 @@ Install a locally built APK with `python3 install.py --serial TV_IP:5555 --apk b
 
 Open Rainforest Cascade from the TV launcher to update settings. Changes apply the next time the screensaver starts. For supported options, defaults, and the host settings-provider schema, see [configuration](docs/CONFIGURATION.md).
 
+## Fire TV Toolkit
+
+[Fire TV Toolkit](https://github.com/jeremykenedy/fire-tv-toolkit) provides guided installation and TV setup:
+
+```bash
+git clone https://github.com/jeremykenedy/fire-tv-toolkit.git
+cd fire-tv-toolkit
+node setup.js
+firetv-screensavers --install=rainforest-cascade
+screensaver --set=rainforest-cascade
+firetv-screensavers --uninstall=rainforest-cascade --force
+```
+
+Repeat the install command to update the existing package. This downloads the latest published release, which remains the original renderer until the replacement release gate passes. Toolkit also manages supported launcher choices, sleep/screensaver timers and settings safeguards. Visual choices live in this app. Fire TV UI discovers installed dreams and provides its documented preview and settings integration.
+
 ## Screenshots
 
-Images show the running preview and settings app on the Fire TV listed above. The preview and settings screens were device-tested; Fire OS did not provide a supported way to activate the app as the system DreamService during verification. The images contain no scene text or watermark.
+Current candidate captures come from the actual Android TV/Google TV emulator at API 34 and a 1920x1080 output surface. Each row shows wide, balanced and close framing. They establish native rendering and controls, not physical TV idle activation or performance. Scene screenshots retain the corresponding [footage licenses](docs/MEDIA.md).
 
-<p align="center">
-  <img src="art/screenshots/rainforest-cascade-day.jpg" alt="Rainforest Cascade running with daylight and rainforest surroundings on Fire TV" width="32%">
-  <img src="art/screenshots/rainforest-cascade-night.jpg" alt="Rainforest Cascade running with night lighting on Fire TV" width="32%">
-  <img src="art/screenshots/rainforest-cascade-settings.jpg" alt="Remote-operated Rainforest Cascade settings on Fire TV" width="32%">
-</p>
+<table>
+  <tr>
+    <td width="33%"><img src="art/screenshots/forest-wide-view.png" alt="Wooded cascade, wide view, actual native Android TV preview" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/forest-balanced.png" alt="Wooded cascade, balanced framing, actual native Android TV preview" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/forest-close-view.png" alt="Wooded cascade, close view, actual native Android TV preview" width="100%"></td>
+  </tr>
+  <tr>
+    <td width="33%"><img src="art/screenshots/stone-wide-view.png" alt="Mossy stone falls, wide view, actual native Android TV preview" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/stone-balanced.png" alt="Mossy stone falls, balanced framing, actual native Android TV preview" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/stone-close-view.png" alt="Mossy stone falls, close view, actual native Android TV preview" width="100%"></td>
+  </tr>
+  <tr>
+    <td width="33%"><img src="art/screenshots/canyon-wide-view.png" alt="Snowy canyon waterfall, wide view, actual native Android TV preview" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/canyon-balanced.png" alt="Snowy canyon waterfall, balanced framing, actual native Android TV preview" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/canyon-close-view.png" alt="Snowy canyon waterfall, close view, actual native Android TV preview" width="100%"></td>
+  </tr>
+  <tr>
+    <td width="33%"><img src="art/screenshots/forest-heavy-mist.png" alt="Added heavy mist, actual native Android TV capture" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/forest-sunlight.png" alt="Added sunlight shimmer, actual native Android TV capture" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/forest-night-heavy-slow.png" alt="Cool night grade with mist and slow playback, actual native Android TV capture" width="100%"></td>
+  </tr>
+  <tr>
+    <td width="33%"><img src="art/screenshots/settings-real-waterfalls.png" alt="Remote-operated native settings, actual native Android TV capture" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/credits.png" alt="Bundled source credits, actual native Android TV capture" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/credits-scrolled.png" alt="Full application license scrolled with the remote, actual native Android TV capture" width="100%"></td>
+  </tr>
+</table>
 
 ## Building and testing
 
@@ -97,7 +131,7 @@ python3 scripts/check-privacy.py
 bash scripts/check-style.sh
 ```
 
-The Java coverage gate is 100% line and branch coverage for the project-owned settings and option-resolution logic. Android framework integration and Canvas drawing are verified on device and are outside host JaCoCo coverage. The Python installer is gated at 100% line and branch coverage.
+The Java coverage gate is 100% line and branch coverage for the project-owned settings and option-resolution logic. Android framework, decoder, graphics and lifecycle code require native verification and are outside host JaCoCo coverage. The Python installer is gated at 100% line and branch coverage.
 
 ## Documentation
 
@@ -105,7 +139,10 @@ The Java coverage gate is 100% line and branch coverage for the project-owned se
 - [Building](docs/BUILDING.md)
 - [CI](docs/CI.md)
 - [Configuration](docs/CONFIGURATION.md)
+- [Media provenance and licenses](docs/MEDIA.md)
+- [Quality correction and verification boundaries](docs/QUALITY-AUDIT.md)
 - [Installation](docs/INSTALLATION.md)
+- [Developer integration contract](docs/INTEGRATION.md)
 - [Releasing](docs/RELEASING.md)
 - [Testing](docs/TESTING.md)
 - [Troubleshooting](docs/TROUBLESHOOTING.md)
@@ -118,6 +155,4 @@ See the [changelog](CHANGELOG.md) for the release history.
 
 ## License
 
-Rainforest Cascade is licensed under the [Apache License, Version 2.0](LICENSE). See [NOTICE](NOTICE) for project notices.
-
-Show some love by starring this repository on GitHub: [Star Rainforest Cascade](https://github.com/jeremykenedy/rainforest-cascade/stargazers).
+Rainforest Cascade is licensed under the [Apache License, Version 2.0](LICENSE). Recorded clips have their own Creative Commons licenses. See [NOTICE](NOTICE) and [media provenance](docs/MEDIA.md) for authors, licenses and modifications. Credits and the full application license are also available offline from settings.

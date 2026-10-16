@@ -35,6 +35,7 @@ jobs:
       - name: Build and validate APK
         run: |
           bash build.sh
+          python3 scripts/check-artifacts.py
           "$ANDROID_HOME/build-tools/36.0.0/aapt" dump permissions build/rainforest-cascade.apk
           if "$ANDROID_HOME/build-tools/36.0.0/aapt" dump permissions build/rainforest-cascade.apk | grep -q android.permission.INTERNET; then
             echo 'The screensaver must not request network access.' >&2

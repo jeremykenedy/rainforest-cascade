@@ -1,6 +1,6 @@
 # Media provenance
 
-The app bundles three real moving waterfall environments for offline playback. Source and shader code are Apache-2.0. Each original recording and its modified bundled video retain the separate license linked below; the application license does not replace those terms. Exact source and bundled hashes, modification notes and adaptation licenses are in [`assets/media.json`](../assets/media.json).
+The app bundles three real moving waterfall environments and a separate original rendered sunrise flower garden for offline playback. Source and shader code are Apache-2.0. Each original recording and its modified bundled video retain the separate license linked below; the application license does not replace those terms. Exact source and bundled hashes, modification notes and adaptation licenses are in [`assets/media.json`](../assets/media.json).
 
 | Environment | Recording | Author | Recording and adaptation license | Loop |
 | --- | --- | --- | --- | --- |
@@ -12,4 +12,4 @@ Continuous shots were trimmed, uniformly resized to 1920x1080/30 fps H.264, cros
 
 Night is a shader grade of daylight clips. Mist and sunlight controls add atmosphere rather than controlling weather at the recorded location. Full attribution and the application license are bundled in the APK and accessible in settings. The original authors do not endorse the application.
 
-The flower-garden sunrise reference is not implemented by these recordings and remains a separate quality requirement. No YouTube or Vecteezy reference footage is bundled.
+The separate [original garden candidate](GARDEN.md) addresses the flower-garden sunrise direction with animated matte artwork, independently moving water and foliage. It remains subject to moving quality and physical verification. No YouTube, Vecteezy or Pexels reference footage is bundled.

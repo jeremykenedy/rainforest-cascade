@@ -13,7 +13,7 @@ Run actual Java formatting, settings tests and the 100% line and branch gate:
 bash scripts/test-coverage.sh
 ```
 
-Build the APK and verify media hashes, all three recordings, uncompressed playable video entries, XML, and the packaged offline NOTICE and LICENSE:
+Build the APK and verify media hashes, all three recordings and the original rendered garden loop, uncompressed playable video entries, XML, and the packaged offline NOTICE and LICENSE:
 
 ```bash
 bash build.sh

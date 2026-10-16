@@ -1,6 +1,14 @@
 # Verification
 
-## Current 1.1.0 emulator candidate
+## Four-scene garden candidate
+
+The separate four-scene candidate was tested on the same API 34 Google TV emulator at 1920x1080. Its signed APK SHA-256 is `88602f840deae1e9a7fa8de5b1dda03601c70d0d70399ab11262e1817e7de31f` (72,053,957 bytes). The three recorded video files, shader and renderer remain unchanged. Garden is original rendered artwork; see [garden provenance, controls and verification](GARDEN.md).
+
+Actual native checks cover all garden framings, effects, night grading and fast playback, remote Down then Select to Preview and Back to settings, offline credits, and a bound nonpersistent test-Dream followed by Back. The native motion recording runs for 33.514 seconds after a 40-second settle. All seven prior preferences and seven system values were compared and restored exactly, including the selected Reel Atrium Dream and enabled value. The app was stopped and Home restored. Physical moving review, sustained performance, idle activation, sleep/wake and final release remain pending.
+
+The first test incorrectly expected immediate Select to launch Preview while the ScrollView held initial focus. That assertion stopped the harness and its finally block restored state. A corrected test verified the actual Down then Select path against fresh XML showing the focused Preview button; no navigation source change was needed.
+
+## Three-recording 1.1.0 emulator candidate
 
 On October 16, 2026, the signed candidate was installed on the shared Google TV/Android TV emulator, API 34, serial `emulator-5580`, with a 1920x1080 output surface. The tested APK SHA-256 is `678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9` (50,123,900 bytes).
 
@@ -40,6 +48,6 @@ The app installed successfully and its preview and remote-operated settings scre
 
 ## Current candidate limits
 
-The 1.1.0 candidate uses real 1920x1080/30 fps video decoded into OpenGL ES 2.0. Source frame rate and recorded emulator compositor frame counts do not prove sustained renderer or physical display frame rate. Long-duration temperature, idle power, hardware decoder behavior and burn-in protection have not been measured on a physical TV. Current physical idle activation, sleep/wake and remote return paths remain pending.
+The 1.1.0 candidates use 1920x1080/30 fps recorded and rendered video decoded into OpenGL ES 2.0. Source frame rate and recorded emulator compositor frame counts do not prove sustained renderer or physical display frame rate. Long-duration temperature, idle power, hardware decoder behavior and burn-in protection have not been measured on a physical TV. Current physical idle activation, sleep/wake and remote return paths remain pending.
 
 Host coverage is 100% line and branch for the option resolver and settings validator. The corrected gate enforces COVEREDRATIO 1.0 and formatting checks actual Java files from the project root. Framework, decoder, graphics and lifecycle code require native verification and are outside host coverage.

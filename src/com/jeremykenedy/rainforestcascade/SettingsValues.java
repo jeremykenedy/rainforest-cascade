@@ -5,7 +5,8 @@ public final class SettingsValues {
 
   public static boolean isSupported(String key, String value) {
     if (key == null || value == null) return false;
-    if ("environment".equals(key)) return oneOf(value, "forest", "stone", "canyon", "random");
+    if ("environment".equals(key))
+      return oneOf(value, "forest", "stone", "canyon", "garden", "random");
     if ("lighting".equals(key)) return oneOf(value, "day", "night", "random");
     if ("width".equals(key)) return oneOf(value, "narrow", "curtain", "wide", "random");
     if ("speed".equals(key)) return oneOf(value, "slow", "natural", "fast", "random");

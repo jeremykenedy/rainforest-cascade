@@ -3,7 +3,7 @@
   <a href="https://github.com/jeremykenedy/rainforest-cascade#gh-dark-mode-only"><picture><source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="art/banner-mobile-still-dark.d5171576048d.svg"><source media="(prefers-reduced-motion: reduce)" srcset="art/banner-still-dark.254bae11ffa8.svg"><source media="(max-width: 600px)" srcset="art/banner-mobile-dark.442a0ba1f7b1.svg"><img src="art/banner-dark.06a203cdc11a.svg#gh-dark-mode-only" alt="Rainforest Cascade" width="800"></picture></a>
 </p>
 
-<p align="center">Real waterfalls in forest, stone and canyon landscapes, with quiet atmospheric controls.</p>
+<p align="center">Three recorded waterfalls and an original sunrise flower garden, with quiet atmospheric controls.</p>
 
 <p align="center">
     <a href="https://github.com/jeremykenedy/rainforest-cascade/releases"><img src="https://img.shields.io/github/downloads/jeremykenedy/rainforest-cascade/total" alt="GitHub release downloads"></a>
@@ -44,7 +44,8 @@ The app has no ads, analytics, telemetry, diagnostics, crash reporting, or track
 The 1.1.0 source candidate replaces the original painted waterfall. Emulator checks cover the current candidate; physical TV verification remains pending. The latest published release still uses the earlier Canvas renderer.
 
 - Three licensed real moving environments: a wooded cascade, mossy stone falls and a snowy canyon waterfall.
-- Aspect-preserving 1080p footage with wide, balanced and close framing. Camera framing changes the view without stretching water or rocks.
+- A separate original sunrise flower garden with animated falling water, pond ripples, mist and foreground foliage. This is rendered artwork, not recorded footage.
+- Aspect-preserving 1080p scenes with wide, balanced and close framing. Camera framing changes the view without stretching water or rocks.
 - Actual slow, natural or fast video playback.
 - Daylight or cool night grading, plus separate added mist and sunlight shimmer.
 - Very slow full-scene drift, per-setting random choices and a master random mode.
@@ -52,7 +53,7 @@ The 1.1.0 source candidate replaces the original painted waterfall. Emulator che
 
 ## Requirements
 
-Android API 23 or newer, OpenGL ES 2.0 and H.264 decoding are required. The project targets API 36. The replacement uses 1920x1080 recordings; a 4K panel or higher-resolution original source does not establish native 4K composition.
+Android API 23 or newer, OpenGL ES 2.0 and H.264 decoding are required. The project targets API 36. The replacement uses 1920x1080 recorded and rendered scenes; a 4K panel or higher-resolution original source does not establish native 4K composition.
 
 Current native results and the historical Fire TV preview run are distinguished in [device verification](docs/VERIFICATION.md). Physical Fire TV idle activation and sustained replacement-renderer performance remain pending.
 
@@ -87,7 +88,7 @@ Repeat the install command to update the existing package. This downloads the la
 
 ## Screenshots
 
-Current candidate captures come from the actual Android TV/Google TV emulator at API 34 and a 1920x1080 output surface. Each row shows wide, balanced and close framing. They establish native rendering and controls, not physical TV idle activation or performance. Scene screenshots retain the corresponding [footage licenses](docs/MEDIA.md).
+Current candidate captures come from the actual Android TV/Google TV emulator at API 34 and a 1920x1080 output surface. The first three scene rows and the final garden row compare wide, balanced and close framing. They establish native rendering and controls, not physical TV idle activation or performance. Scene screenshots retain the corresponding [footage licenses](docs/MEDIA.md).
 
 <table>
   <tr>
@@ -111,11 +112,19 @@ Current candidate captures come from the actual Android TV/Google TV emulator at
     <td width="33%"><img src="art/screenshots/forest-night-heavy-slow.png" alt="Cool night grade with mist and slow playback, actual native Android TV capture" width="100%"></td>
   </tr>
   <tr>
-    <td width="33%"><img src="art/screenshots/settings-real-waterfalls.png" alt="Remote-operated native settings, actual native Android TV capture" width="100%"></td>
-    <td width="33%"><img src="art/screenshots/credits.png" alt="Bundled source credits, actual native Android TV capture" width="100%"></td>
-    <td width="33%"><img src="art/screenshots/credits-scrolled.png" alt="Full application license scrolled with the remote, actual native Android TV capture" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/settings-garden.png" alt="Remote-operated native settings, actual native Android TV capture" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/credits-garden.png" alt="Bundled source credits, actual native Android TV capture" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/credits-garden-scrolled.png" alt="Full application license scrolled with the remote, actual native Android TV capture" width="100%"></td>
+  </tr>
+
+  <tr>
+    <td width="33%"><img src="art/screenshots/garden-wide-view.png" alt="Original rendered sunrise garden at wide framing" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/garden-balanced.png" alt="Original garden at balanced framing" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/garden-close-heavy-fast.png" alt="Close garden framing with added mist and fast playback" width="100%"></td>
   </tr>
 </table>
+
+The garden also has actual native [night grading](art/screenshots/garden-night-heavy-slow.png) and [DreamService](art/screenshots/dream-garden.png) captures. Recorded-scene captures retain their original per-image APK provenance because their videos, shader and renderer are unchanged. Garden and refreshed settings/credits captures use the four-scene candidate. See [garden artwork and verification](docs/GARDEN.md).
 
 ## Building and testing
 
@@ -135,6 +144,7 @@ The Java coverage gate is 100% line and branch coverage for the project-owned se
 
 ## Documentation
 
+- [Original sunrise garden, rendering and limits](docs/GARDEN.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [Building](docs/BUILDING.md)
 - [CI](docs/CI.md)

@@ -38,7 +38,7 @@ public final class WaterfallOptions {
       boolean randomizeAll,
       Random random) {
     String selectedEnvironment =
-        choose(environment, randomizeAll, random, "forest", "stone", "canyon");
+        choose(environment, randomizeAll, random, "forest", "stone", "canyon", "garden");
     String selectedLighting = choose(lighting, randomizeAll, random, "day", "night");
     String selectedWidth = choose(width, randomizeAll, random, "curtain", "narrow", "wide");
     String selectedSpeed = choose(speed, randomizeAll, random, "natural", "slow", "fast");
@@ -63,6 +63,7 @@ public final class WaterfallOptions {
   static int environmentIndex(String value) {
     if ("stone".equals(value)) return 1;
     if ("canyon".equals(value)) return 2;
+    if ("garden".equals(value)) return 3;
     return 0;
   }
 

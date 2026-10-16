@@ -59,7 +59,12 @@ public final class SettingsProvider extends ContentProvider {
             new String[] {"key", "title", "type", "default", "choices", "randomAllowed"});
     cursor.addRow(
         new Object[] {
-          "environment", "Surroundings", "choice", "forest", "forest|stone|canyon|random", true
+          "environment",
+          "Surroundings",
+          "choice",
+          "forest",
+          "forest|stone|canyon|garden|random",
+          true
         });
     cursor.addRow(
         new Object[] {"lighting", "Time of day", "choice", "day", "day|night|random", true});

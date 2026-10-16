@@ -45,7 +45,7 @@
     "height": 1080,
     "fps": 30,
     "duration_seconds": 5.5,
-    "title": "File:201 Goðafoss in winter long exposure timelapse Video by Giles Laurent.webm",
+    "title": "File:201 Go\u00f0afoss in winter long exposure timelapse Video by Giles Laurent.webm",
     "author": "Giles Laurent",
     "source": "https://commons.wikimedia.org/wiki/File:201_Go%C3%B0afoss_in_winter_long_exposure_timelapse_Video_by_Giles_Laurent.webm",
     "download": "https://upload.wikimedia.org/wikipedia/commons/c/cb/201_Go%C3%B0afoss_in_winter_long_exposure_timelapse_Video_by_Giles_Laurent.webm",
@@ -55,5 +55,26 @@
     "modifications": "Trimmed to a continuous shot, uniformly resized to 1920x1080/30 fps H.264, blended across the loop boundary; audio omitted. The source is a real long-exposure winter timelapse; its silky water motion is intentional.",
     "adaptation_license": "CC BY-SA 4.0",
     "adaptation_license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  {
+    "file": "res/raw/garden.mp4",
+    "bytes": 21105192,
+    "sha256": "5bd04da73136d7521ae386317a2f2b2c180b7081dc3b453675ad23481cf356d4",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "duration_seconds": 16,
+    "title": "Sunrise flower garden waterfall",
+    "author": "Jeremy Kenedy",
+    "source": "https://github.com/jeremykenedy/rainforest-cascade/blob/add-sunrise-waterfall-garden/art/materials/sunrise-garden-original.png",
+    "license": "Apache-2.0",
+    "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "original_artwork": true,
+    "source_plate_width": 1672,
+    "source_plate_height": 941,
+    "source_plate_sha256": "0f55fe3efe257a5b39d53985c8b9f4bbe843edb763a5b4c7d097a5ec4d6b5546",
+    "modifications": "Original generated garden matte with independently advected waterfall texture, aerated foam, traveling pond ripples, impact mist and local foreground foliage sway; rendered to 1080p/30 with periodic motion fields. This is an animated matte hybrid, not photographed moving footage.",
+    "adaptation_license": "Apache-2.0",
+    "adaptation_license_url": "https://www.apache.org/licenses/LICENSE-2.0"
   }
 ]

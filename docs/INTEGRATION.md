@@ -43,3 +43,5 @@ repository installer.
 Application source is Apache-2.0. Each recorded clip and its modified video retain
 their individual CC BY 4.0 or CC BY-SA 4.0 license. Preserve [NOTICE](../NOTICE),
 [media provenance](MEDIA.md), adaptation terms and bundled offline credits.
+
+The compatible garden candidate adds `garden` to the existing `environment` choices. It uses the same package, components, seven preference keys and provider endpoints. The three original recorded environments remain unchanged; garden is separately labeled rendered artwork.

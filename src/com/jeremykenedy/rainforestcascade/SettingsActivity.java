@@ -46,8 +46,10 @@ public final class SettingsActivity extends Activity {
         content,
         "Surroundings",
         "environment",
-        new String[] {"forest", "stone", "canyon", "random"},
-        new String[] {"Forest", "Mossy stone", "Canyon", "Random"},
+        new String[] {"forest", "stone", "canyon", "garden", "random"},
+        new String[] {
+          "Forest", "Mossy stone", "Canyon", "Sunrise flower garden (rendered)", "Random"
+        },
         "forest");
     addChoice(
         content,

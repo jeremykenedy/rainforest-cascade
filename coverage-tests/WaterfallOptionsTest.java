@@ -26,7 +26,7 @@ public final class WaterfallOptionsTest {
 
   @Test
   public void preservesEachEnvironmentWhileChangingTheFraming() {
-    for (String environment : new String[] {"forest", "stone", "canyon"}) {
+    for (String environment : new String[] {"forest", "stone", "canyon", "garden"}) {
       Set<Float> framings = new HashSet<>();
       for (String width : new String[] {"narrow", "curtain", "wide"}) {
         WaterfallOptions options =
@@ -48,6 +48,7 @@ public final class WaterfallOptionsTest {
     assertEquals(0, WaterfallOptions.environmentIndex("forest"));
     assertEquals(1, WaterfallOptions.environmentIndex("stone"));
     assertEquals(2, WaterfallOptions.environmentIndex("canyon"));
+    assertEquals(3, WaterfallOptions.environmentIndex("garden"));
     assertEquals(0, WaterfallOptions.environmentIndex("unsupported"));
     assertEquals(1f, WaterfallOptions.framingValue("narrow"), 0.001f);
     assertEquals(1.12f, WaterfallOptions.framingValue("curtain"), 0.001f);
@@ -85,11 +86,12 @@ public final class WaterfallOptionsTest {
     Set<Float> widths = new HashSet<>();
     Set<Float> speeds = new HashSet<>();
     Set<Integer> mists = new HashSet<>();
+    Random random = new Random(621);
     for (int seed = 0; seed < 120; seed++) {
       WaterfallOptions perSetting =
           WaterfallOptions.resolve(
-              "random", "random", "random", "random", "random", "random", false, new Random(seed));
-      assertTrue(perSetting.environment >= 0 && perSetting.environment <= 2);
+              "random", "random", "random", "random", "random", "random", false, random);
+      assertTrue(perSetting.environment >= 0 && perSetting.environment <= 3);
       assertTrue(Arrays.asList(1f, 1.12f, 1.25f).contains(perSetting.framingScale));
       assertTrue(Arrays.asList(.58f, 1f, 1.55f).contains(perSetting.speed));
       assertTrue(Arrays.asList(0, 30, 72).contains(perSetting.mist));
@@ -98,14 +100,13 @@ public final class WaterfallOptionsTest {
       speeds.add(perSetting.speed);
       mists.add(perSetting.mist);
       WaterfallOptions all =
-          WaterfallOptions.resolve(
-              "forest", "day", "narrow", "slow", "off", "off", true, new Random(seed));
-      assertTrue(all.environment >= 0 && all.environment <= 2);
+          WaterfallOptions.resolve("forest", "day", "narrow", "slow", "off", "off", true, random);
+      assertTrue(all.environment >= 0 && all.environment <= 3);
       assertTrue(Arrays.asList(1f, 1.12f, 1.25f).contains(all.framingScale));
       assertTrue(Arrays.asList(.58f, 1f, 1.55f).contains(all.speed));
       assertTrue(Arrays.asList(0, 30, 72).contains(all.mist));
     }
-    assertEquals(3, environments.size());
+    assertEquals(4, environments.size());
     assertEquals(3, widths.size());
     assertEquals(3, speeds.size());
     assertEquals(3, mists.size());
@@ -116,6 +117,7 @@ public final class WaterfallOptionsTest {
     assertTrue(SettingsValues.isSupported("environment", "forest"));
     assertTrue(SettingsValues.isSupported("environment", "stone"));
     assertTrue(SettingsValues.isSupported("environment", "canyon"));
+    assertTrue(SettingsValues.isSupported("environment", "garden"));
     assertTrue(SettingsValues.isSupported("environment", "random"));
     assertTrue(SettingsValues.isSupported("lighting", "day"));
     assertTrue(SettingsValues.isSupported("lighting", "night"));

@@ -3,7 +3,7 @@
   "serial": "emulator-5580",
   "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9",
   "apk_bytes": 50123900,
-  "capture_scope": "Actual native surfaces; this does not establish physical TV idle activation or sustained performance.",
+  "capture_scope": "Actual native surfaces from the per-capture APK. The three recorded-scene videos, shader and renderer are unchanged by the compatible garden-option addition. Physical TV behavior remains unverified.",
   "captures": [
     {
       "file": "art/screenshots/forest-wide-view.png",
@@ -14,7 +14,8 @@
       "native_route": "PreviewActivity",
       "scene": "forest",
       "scene_license": "CC BY 4.0",
-      "scene_license_url": "https://creativecommons.org/licenses/by/4.0"
+      "scene_license_url": "https://creativecommons.org/licenses/by/4.0",
+      "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9"
     },
     {
       "file": "art/screenshots/forest-balanced.png",
@@ -25,7 +26,8 @@
       "native_route": "PreviewActivity",
       "scene": "forest",
       "scene_license": "CC BY 4.0",
-      "scene_license_url": "https://creativecommons.org/licenses/by/4.0"
+      "scene_license_url": "https://creativecommons.org/licenses/by/4.0",
+      "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9"
     },
     {
       "file": "art/screenshots/forest-close-view.png",
@@ -36,7 +38,8 @@
       "native_route": "PreviewActivity",
       "scene": "forest",
       "scene_license": "CC BY 4.0",
-      "scene_license_url": "https://creativecommons.org/licenses/by/4.0"
+      "scene_license_url": "https://creativecommons.org/licenses/by/4.0",
+      "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9"
     },
     {
       "file": "art/screenshots/stone-wide-view.png",
@@ -47,7 +50,8 @@
       "native_route": "PreviewActivity",
       "scene": "stone",
       "scene_license": "CC BY-SA 4.0",
-      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9"
     },
     {
       "file": "art/screenshots/stone-balanced.png",
@@ -58,7 +62,8 @@
       "native_route": "PreviewActivity",
       "scene": "stone",
       "scene_license": "CC BY-SA 4.0",
-      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9"
     },
     {
       "file": "art/screenshots/stone-close-view.png",
@@ -69,7 +74,8 @@
       "native_route": "PreviewActivity",
       "scene": "stone",
       "scene_license": "CC BY-SA 4.0",
-      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9"
     },
     {
       "file": "art/screenshots/canyon-wide-view.png",
@@ -80,7 +86,8 @@
       "native_route": "PreviewActivity",
       "scene": "canyon",
       "scene_license": "CC BY-SA 4.0",
-      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9"
     },
     {
       "file": "art/screenshots/canyon-balanced.png",
@@ -91,7 +98,8 @@
       "native_route": "PreviewActivity",
       "scene": "canyon",
       "scene_license": "CC BY-SA 4.0",
-      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9"
     },
     {
       "file": "art/screenshots/canyon-close-view.png",
@@ -102,7 +110,8 @@
       "native_route": "PreviewActivity",
       "scene": "canyon",
       "scene_license": "CC BY-SA 4.0",
-      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      "scene_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9"
     },
     {
       "file": "art/screenshots/forest-heavy-mist.png",
@@ -113,7 +122,8 @@
       "native_route": "PreviewActivity",
       "scene": "forest",
       "scene_license": "CC BY 4.0",
-      "scene_license_url": "https://creativecommons.org/licenses/by/4.0"
+      "scene_license_url": "https://creativecommons.org/licenses/by/4.0",
+      "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9"
     },
     {
       "file": "art/screenshots/forest-sunlight.png",
@@ -124,7 +134,8 @@
       "native_route": "PreviewActivity",
       "scene": "forest",
       "scene_license": "CC BY 4.0",
-      "scene_license_url": "https://creativecommons.org/licenses/by/4.0"
+      "scene_license_url": "https://creativecommons.org/licenses/by/4.0",
+      "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9"
     },
     {
       "file": "art/screenshots/forest-night-heavy-slow.png",
@@ -135,7 +146,8 @@
       "native_route": "PreviewActivity",
       "scene": "forest",
       "scene_license": "CC BY 4.0",
-      "scene_license_url": "https://creativecommons.org/licenses/by/4.0"
+      "scene_license_url": "https://creativecommons.org/licenses/by/4.0",
+      "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9"
     },
     {
       "file": "art/screenshots/settings-real-waterfalls.png",
@@ -143,7 +155,8 @@
       "captured_at_utc": "2026-10-16T09:28:52.995914+00:00",
       "surface_width": 1920,
       "surface_height": 1080,
-      "native_route": "SettingsActivity"
+      "native_route": "SettingsActivity",
+      "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9"
     },
     {
       "file": "art/screenshots/credits.png",
@@ -151,7 +164,8 @@
       "captured_at_utc": "2026-10-16T09:31:02.503327+00:00",
       "surface_width": 1920,
       "surface_height": 1080,
-      "native_route": "SettingsActivity"
+      "native_route": "SettingsActivity",
+      "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9"
     },
     {
       "file": "art/screenshots/credits-scrolled.png",
@@ -159,7 +173,8 @@
       "captured_at_utc": "2026-10-16T09:31:03.861852+00:00",
       "surface_width": 1920,
       "surface_height": 1080,
-      "native_route": "SettingsActivity"
+      "native_route": "SettingsActivity",
+      "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9"
     },
     {
       "file": "art/screenshots/dream-forest.png",
@@ -170,7 +185,97 @@
       "native_route": "WaterfallDreamService via nonpersistent test-Dream",
       "scene": "forest",
       "scene_license": "CC BY 4.0",
-      "scene_license_url": "https://creativecommons.org/licenses/by/4.0"
+      "scene_license_url": "https://creativecommons.org/licenses/by/4.0",
+      "apk_sha256": "678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9"
+    },
+    {
+      "file": "art/screenshots/credits-garden-scrolled.png",
+      "sha256": "de79a66378cc11ec53ac9cfa54137d40159ecea935923e19f9ef7a7214e56f71",
+      "captured_at_utc": "2026-10-16T10:31:02.870348+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "SettingsActivity credits dialog",
+      "scene": "garden original animatedmatte",
+      "scene_license": "Apache-2.0",
+      "apk_sha256": "88602f840deae1e9a7fa8de5b1dda03601c70d0d70399ab11262e1817e7de31f"
+    },
+    {
+      "file": "art/screenshots/credits-garden.png",
+      "sha256": "59e489d3fab0ce1bcba30034b85327c909e0b7e918b496d8414a4675ba56f037",
+      "captured_at_utc": "2026-10-16T10:31:02.053013+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "SettingsActivity credits dialog",
+      "scene": "garden original animatedmatte",
+      "scene_license": "Apache-2.0",
+      "apk_sha256": "88602f840deae1e9a7fa8de5b1dda03601c70d0d70399ab11262e1817e7de31f"
+    },
+    {
+      "file": "art/screenshots/dream-garden.png",
+      "sha256": "90979113dee7cf7bb48bc7a2bdf0e78c853b3cd5812a1a41d56310198a04dd08",
+      "captured_at_utc": "2026-10-16T10:30:59.955885+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "WaterfallDreamService nonpersistenttestDream",
+      "scene": "garden original animatedmatte",
+      "scene_license": "Apache-2.0",
+      "apk_sha256": "88602f840deae1e9a7fa8de5b1dda03601c70d0d70399ab11262e1817e7de31f"
+    },
+    {
+      "file": "art/screenshots/garden-balanced.png",
+      "sha256": "c2e8ddece1ef0601fe18ebc56ed94c6889ff3fff550843b0b408fed30e14d403",
+      "captured_at_utc": "2026-10-16T10:29:42.171158+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "PreviewActivity",
+      "scene": "garden original animatedmatte",
+      "scene_license": "Apache-2.0",
+      "apk_sha256": "88602f840deae1e9a7fa8de5b1dda03601c70d0d70399ab11262e1817e7de31f"
+    },
+    {
+      "file": "art/screenshots/garden-close-heavy-fast.png",
+      "sha256": "b75c4fb336162098d179ba74658cd7b7e5a263ff89a898c7c23eb612d36dd2c1",
+      "captured_at_utc": "2026-10-16T10:29:49.735920+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "PreviewActivity",
+      "scene": "garden original animatedmatte",
+      "scene_license": "Apache-2.0",
+      "apk_sha256": "88602f840deae1e9a7fa8de5b1dda03601c70d0d70399ab11262e1817e7de31f"
+    },
+    {
+      "file": "art/screenshots/garden-night-heavy-slow.png",
+      "sha256": "2ccb4b312978826c298ce9e82e3eebd19c46c34e24ebc75310544840ff92622e",
+      "captured_at_utc": "2026-10-16T10:29:59.374307+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "PreviewActivity",
+      "scene": "garden original animatedmatte",
+      "scene_license": "Apache-2.0",
+      "apk_sha256": "88602f840deae1e9a7fa8de5b1dda03601c70d0d70399ab11262e1817e7de31f"
+    },
+    {
+      "file": "art/screenshots/garden-wide-view.png",
+      "sha256": "8ce465c6d4acf26b741bb3c7859e875b968e44297f8e005b6bea3c17b9c59ec0",
+      "captured_at_utc": "2026-10-16T10:29:02.899005+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "PreviewActivity",
+      "scene": "garden original animatedmatte",
+      "scene_license": "Apache-2.0",
+      "apk_sha256": "88602f840deae1e9a7fa8de5b1dda03601c70d0d70399ab11262e1817e7de31f"
+    },
+    {
+      "file": "art/screenshots/settings-garden.png",
+      "sha256": "17e595a5c6c39b272d9c40f3e7920d6236ca04dd97bae54d8135701347c46b7c",
+      "captured_at_utc": "2026-10-16T10:30:00.902018+00:00",
+      "surface_width": 1920,
+      "surface_height": 1080,
+      "native_route": "SettingsActivity",
+      "scene": "garden original animatedmatte",
+      "scene_license": "Apache-2.0",
+      "apk_sha256": "88602f840deae1e9a7fa8de5b1dda03601c70d0d70399ab11262e1817e7de31f"
     }
-  ]
+  ],
+  "garden_apk_sha256": "88602f840deae1e9a7fa8de5b1dda03601c70d0d70399ab11262e1817e7de31f"
 }

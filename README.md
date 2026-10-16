@@ -3,7 +3,7 @@
   <a href="https://github.com/jeremykenedy/rainforest-cascade#gh-dark-mode-only"><picture><source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="art/banner-mobile-still-dark.d5171576048d.svg"><source media="(prefers-reduced-motion: reduce)" srcset="art/banner-still-dark.254bae11ffa8.svg"><source media="(max-width: 600px)" srcset="art/banner-mobile-dark.442a0ba1f7b1.svg"><img src="art/banner-dark.06a203cdc11a.svg#gh-dark-mode-only" alt="Rainforest Cascade" width="800"></picture></a>
 </p>
 
-<p align="center">Real waterfalls in forest, stone and canyon landscapes, with quiet atmospheric controls.</p>
+<p align="center">Three recorded waterfalls and an original sunrise flower garden, with quiet atmospheric controls.</p>
 
 <p align="center">
     <a href="https://github.com/jeremykenedy/rainforest-cascade/releases"><img src="https://img.shields.io/github/downloads/jeremykenedy/rainforest-cascade/total" alt="GitHub release downloads"></a>
@@ -41,10 +41,11 @@ The app has no ads, analytics, telemetry, diagnostics, crash reporting, or track
 
 ## Features
 
-The 1.1.0 source candidate replaces the original painted waterfall. Emulator checks cover the current candidate; physical TV verification remains pending. The latest published release still uses the earlier Canvas renderer.
+The 1.1.0 build replaces the original painted waterfall. Native checks cover all four scenes on API 34; the exact signed production build also passed remote Preview, moving garden playback and an actual night test-Dream with Back on a physical AFTDEC012E Fire TV. See [verification](docs/VERIFICATION.md) for the artifact and limits.
 
 - Three licensed real moving environments: a wooded cascade, mossy stone falls and a snowy canyon waterfall.
-- Aspect-preserving 1080p footage with wide, balanced and close framing. Camera framing changes the view without stretching water or rocks.
+- A separate original sunrise flower garden with animated falling water, pond ripples, mist and foreground foliage. This is rendered artwork, not recorded footage.
+- Aspect-preserving 1080p scenes with wide, balanced and close framing. Camera framing changes the view without stretching water or rocks.
 - Actual slow, natural or fast video playback.
 - Daylight or cool night grading, plus separate added mist and sunlight shimmer.
 - Very slow full-scene drift, per-setting random choices and a master random mode.
@@ -52,9 +53,9 @@ The 1.1.0 source candidate replaces the original painted waterfall. Emulator che
 
 ## Requirements
 
-Android API 23 or newer, OpenGL ES 2.0 and H.264 decoding are required. The project targets API 36. The replacement uses 1920x1080 recordings; a 4K panel or higher-resolution original source does not establish native 4K composition.
+Android API 23 or newer, OpenGL ES 2.0 and H.264 decoding are required. The project targets API 36. The replacement uses 1920x1080 recorded and rendered scenes; a 4K panel or higher-resolution original source does not establish native 4K composition.
 
-Current native results and the historical Fire TV preview run are distinguished in [device verification](docs/VERIFICATION.md). Physical Fire TV idle activation and sustained replacement-renderer performance remain pending.
+Current native and physical results are distinguished in [device verification](docs/VERIFICATION.md). Automatic idle activation across vendor configurations and sustained thermal/power behavior remain unverified.
 
 ## Installation
 
@@ -83,13 +84,18 @@ screensaver --set=rainforest-cascade
 firetv-screensavers --uninstall=rainforest-cascade --force
 ```
 
-Repeat the install command to update the existing package. This downloads the latest published release, which remains the original renderer until the replacement release gate passes. Toolkit also manages supported launcher choices, sleep/screensaver timers and settings safeguards. Visual choices live in this app. Fire TV UI discovers installed dreams and provides its documented preview and settings integration.
+Repeat the install command to update the existing package. This downloads the latest stable published release. Toolkit also manages supported launcher choices, sleep/screensaver timers and settings safeguards. Visual choices live in this app. Fire TV UI discovers installed dreams and provides its documented preview and settings integration.
 
 ## Screenshots
 
-Current candidate captures come from the actual Android TV/Google TV emulator at API 34 and a 1920x1080 output surface. Each row shows wide, balanced and close framing. They establish native rendering and controls, not physical TV idle activation or performance. Scene screenshots retain the corresponding [footage licenses](docs/MEDIA.md).
+The first row includes the exact final production APK on a physical AFTDEC012E Fire TV in daylight Preview and a bound night DreamService, followed by its wide emulator garden view. Remaining native captures show framing, effects and remote controls on API 34. All captures are 1920x1080; scene screenshots retain the corresponding [media licenses](docs/MEDIA.md).
 
 <table>
+  <tr>
+    <td width="33%"><img src="art/screenshots/fire-tv-garden-day.png" alt="Original sunrise flower garden running on physical Fire TV" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/fire-tv-garden-night-dream.png" alt="Cool night garden through actual bound DreamService on physical Fire TV" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/garden-wide-view.png" alt="Wide sunrise garden through the API34 native preview" width="100%"></td>
+  </tr>
   <tr>
     <td width="33%"><img src="art/screenshots/forest-wide-view.png" alt="Wooded cascade, wide view, actual native Android TV preview" width="100%"></td>
     <td width="33%"><img src="art/screenshots/forest-balanced.png" alt="Wooded cascade, balanced framing, actual native Android TV preview" width="100%"></td>
@@ -111,11 +117,19 @@ Current candidate captures come from the actual Android TV/Google TV emulator at
     <td width="33%"><img src="art/screenshots/forest-night-heavy-slow.png" alt="Cool night grade with mist and slow playback, actual native Android TV capture" width="100%"></td>
   </tr>
   <tr>
-    <td width="33%"><img src="art/screenshots/settings-real-waterfalls.png" alt="Remote-operated native settings, actual native Android TV capture" width="100%"></td>
-    <td width="33%"><img src="art/screenshots/credits.png" alt="Bundled source credits, actual native Android TV capture" width="100%"></td>
-    <td width="33%"><img src="art/screenshots/credits-scrolled.png" alt="Full application license scrolled with the remote, actual native Android TV capture" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/settings-garden.png" alt="Remote-operated native settings, actual native Android TV capture" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/credits-garden.png" alt="Bundled source credits, actual native Android TV capture" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/credits-garden-scrolled.png" alt="Full application license scrolled with the remote, actual native Android TV capture" width="100%"></td>
+  </tr>
+
+  <tr>
+    <td width="33%"><img src="art/screenshots/garden-wide-view.png" alt="Original rendered sunrise garden at wide framing" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/garden-balanced.png" alt="Original garden at balanced framing" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/garden-close-heavy-fast.png" alt="Close garden framing with added mist and fast playback" width="100%"></td>
   </tr>
 </table>
+
+The garden also has actual native [night grading](art/screenshots/garden-night-heavy-slow.png) and [DreamService](art/screenshots/dream-garden.png) captures. Recorded-scene captures retain their original per-image APK provenance because their videos, shader and renderer are unchanged. Garden and refreshed settings/credits captures use the four-scene production build. See [garden artwork and verification](docs/GARDEN.md).
 
 ## Building and testing
 
@@ -135,6 +149,7 @@ The Java coverage gate is 100% line and branch coverage for the project-owned se
 
 ## Documentation
 
+- [Original sunrise garden, rendering and limits](docs/GARDEN.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [Building](docs/BUILDING.md)
 - [CI](docs/CI.md)
@@ -148,6 +163,8 @@ The Java coverage gate is 100% line and branch coverage for the project-owned se
 - [Troubleshooting](docs/TROUBLESHOOTING.md)
 - [Verification and device results](docs/VERIFICATION.md)
 - [Version 1.0.0 release notes](docs/releases/v1.0.0.md)
+
+See [1.1.0 upgrade and release details](docs/releases/v1.1.0.md).
 
 ## Changelog
 

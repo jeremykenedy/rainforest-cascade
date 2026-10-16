@@ -36,3 +36,7 @@ candidate therefore uses three stronger moving environments with honest uniform
 framing controls. It does not claim nine different waterfall locations or
 physical width control. The flower-garden sunrise scene remains unfulfilled.
 No candidate release or physical TV test is claimed by this audit.
+
+## Separate sunrise garden candidate
+
+The garden reference has a distinct original animated-matte candidate. Its generated 1672x941 plate is rendered to 1080p with independently moving falling-water detail, pond waves, mist and local foreground foliage. It is not recorded footage. Native garden framing/effects, remote Down then Select Preview and Back, actual bound DreamService and credits were checked on API 34; exact preferences and system values were restored. Independent native moving review accepted changing waterfall, pond and mist across the 16-second cycle. Public branch checks and physical verification remain pending.

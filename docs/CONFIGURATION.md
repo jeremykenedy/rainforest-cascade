@@ -4,13 +4,17 @@ Open Rainforest Cascade from the TV launcher and operate the settings with the r
 
 | Setting | Choices | Default |
 | --- | --- | --- |
-| Surroundings | Rainforest, mossy stone, red canyon, random | Rainforest |
+| Surroundings | Forest, mossy stone, canyon, random | Forest |
 | Time of day | Daylight, night, random | Daylight |
-| Waterfall width | Narrow, curtain, wide, random | Curtain |
+| Framing | Wide view, balanced, close view, random | Balanced |
 | Water flow | Slow, natural, fast, random | Natural |
-| Water mist | Off, light, heavy, random | Light |
+| Added mist | Off, light, heavy, random | Light |
 | Sunlight shimmer | Off, on, random | On |
 | Randomize all | Off, on | Off |
+
+Each environment selects a real waterfall recording. Framing changes the camera view uniformly at 1.0x, 1.12x or 1.25x; it does not change the physical width of the recorded water. The legacy saved key `width` keeps its existing values: `narrow` means wide view, `curtain` means balanced and `wide` means close view. Water and rocks keep their proportions. The source locations and authors are in [media provenance](MEDIA.md). Speed changes real playback to 0.58x, 1x or 1.55x. Night is a cool dim grade of daylight footage. Added mist and sunlight shimmer are separate effects; turning them off does not remove natural spray or sunlight already recorded in the clip. Sunlight shimmer is suppressed in night mode.
+
+The final settings button opens bundled source credits and the full application license offline. Existing keys and accepted values are preserved.
 
 The app-owned settings provider is `com.jeremykenedy.rainforestcascade.settings`:
 
@@ -18,4 +22,4 @@ The app-owned settings provider is `com.jeremykenedy.rainforestcascade.settings`
 - `content://com.jeremykenedy.rainforestcascade.settings/settings` returns current key/value pairs.
 - Update one setting through the `settings` URI with `ContentValues` fields `key` and `value`. Values outside the schema are rejected.
 
-These contracts support host interfaces that opt to integrate them. The current Fire TV UI app's screensaver picker does not itself edit app-specific settings.
+These contracts support host interfaces that opt to integrate them. Host-specific settings editing and preview capabilities must be verified against the installed host version.

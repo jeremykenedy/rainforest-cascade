@@ -1,10 +1,30 @@
 # Verification
 
-## Fire TV
+## Current 1.1.0 emulator candidate
+
+On October 16, 2026, the signed candidate was installed on the shared Google TV/Android TV emulator, API 34, serial `emulator-5580`, with a 1920x1080 output surface. The tested APK SHA-256 is `678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9` (50,123,900 bytes).
+
+After a 40-second settle, native captures cover all three environments at wide, balanced and close framing, added mist and sunlight, cool night grading, slow and fast playback, readable remote settings, and offline credits scrolled into the full Apache application license. Screenshot provenance is in [`art/screenshots/provenance.json`](../art/screenshots/provenance.json). Framing preserves water and rock proportions; it changes camera crop rather than physical waterfall width.
+
+The actual `WaterfallDreamService` was bound through the emulator's nonpersistent test-Dream route. Dream-manager output identifies the service, `isPreview=true` and `mBound=true`; Back exited it. This exercises the real service but does not prove physical TV idle activation. All seven prior preference values were restored. The selected Reel Atrium component and enabled value `1` remained unchanged, and the app was stopped before returning Home.
+
+| Native recording | Actual duration | Decoded compositor frames | Changed adjacent frames |
+| --- | --- | --- | --- |
+| Forest, balanced | 20.635 s | 957 | 641 |
+| Mossy stone, balanced | 20.715 s | 928 | 687 |
+| Snowy canyon, balanced | 10.768 s | 388 | 328 |
+| Slow playback with night/mist | 4.022 s | 147 | 87 |
+| Fast daylight playback | 4.449 s | 148 | 138 |
+
+Every decoded native frame was nonempty. Changed-frame counts use a mean channel difference above 0.02 on reduced diagnostic frames. The three source loops decode completely and their boundary changes are comparable to ordinary frame changes. These statistics support moving review and are not renderer FPS measurements. The emulator logged an unsupported `eglQueryContext` attribute during surface setup; the native images and playback continued. Physical decoder/GPU behavior and sustained performance still require hardware verification.
+
+The final signed candidate SHA-256 is `ba2a3695bc45fe66fd8ab136e7f9a4e5fef7cb5f4d7aa9369057c31d7f35fd47` (50,947,205 bytes). Its classes, shader, three videos and application license are byte-identical to the native-tested APK. The only attribution change removes a trailing blank line. The final embedded screensaver preview is refreshed from the actual native forest capture. Its source image is separate from the continuously moving video used by the renderer.
+
+## Historical 1.0 physical Fire TV preview
 
 - Device: Amazon Fire TV Stick 4K Max, model AFTDEC012E
-- Fire OS: 11
-- Android API: 30
+- Android API reported by the earlier record: 30
+- Fire OS build: not refreshed for this candidate
 - Connection: ADB over the local network
 - Screen: TV panel reports 3840x2160; Android logical output is validated separately and no native 4K composition claim is made
 - Screensaver component before and after test: `com.androsaver/.ScreensaverService`
@@ -14,10 +34,12 @@ The app installed successfully and its preview and remote-operated settings scre
 
 | Platform | Device | Result |
 | --- | --- | --- |
-| Fire TV DreamService activation | AFTDEC012E, Fire OS 11, API 30 | Not verified. We are looking for a Fire TV owner to confirm DreamService selection and idle activation, then report the model, Fire OS/API, resolution, and results in the [issue tracker](https://github.com/jeremykenedy/rainforest-cascade/issues). Preview and settings were tested on this device. |
+| Fire TV DreamService activation | AFTDEC012E, historical API 30 record | Not verified. We are looking for a Fire TV owner to confirm DreamService selection and idle activation, then report the model, Fire OS/API, resolution, and results in the [issue tracker](https://github.com/jeremykenedy/rainforest-cascade/issues). Preview and settings were tested on this device. |
 | Physical Android TV | Not tested for this release | We are looking for an Android TV owner to test installation, screensaver selection and activation, and remote settings, then report the model, OS/API, resolution, and results in the [issue tracker](https://github.com/jeremykenedy/rainforest-cascade/issues). |
 | Physical Google TV | Not tested for this release | We are looking for a Google TV owner to run the same checks and report the model, OS/API, resolution, and results in the [issue tracker](https://github.com/jeremykenedy/rainforest-cascade/issues). |
 
-## Runtime and coverage limits
+## Current candidate limits
 
-Canvas draws continuously at a requested 30 frames per second while active and stops on the dream lifecycle stop callback. Sustained frame pacing, temperature, idle power, and long-duration burn-in have not been measured. Host coverage is 100% line and branch for the option resolver and settings validator; Android-dependent lifecycle and drawing code is excluded from host coverage.
+The 1.1.0 candidate uses real 1920x1080/30 fps video decoded into OpenGL ES 2.0. Source frame rate and recorded emulator compositor frame counts do not prove sustained renderer or physical display frame rate. Long-duration temperature, idle power, hardware decoder behavior and burn-in protection have not been measured on a physical TV. Current physical idle activation, sleep/wake and remote return paths remain pending.
+
+Host coverage is 100% line and branch for the option resolver and settings validator. The corrected gate enforces COVEREDRATIO 1.0 and formatting checks actual Java files from the project root. Framework, decoder, graphics and lifecycle code require native verification and are outside host coverage.

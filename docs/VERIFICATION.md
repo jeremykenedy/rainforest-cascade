@@ -4,7 +4,7 @@
 
 The exact signed APK is 72,053,957 bytes with SHA-256 `88602f840deae1e9a7fa8de5b1dda03601c70d0d70399ab11262e1817e7de31f`. Its production signing certificate remains `4818ad1fb9c91392b47d28fb84113640dfdc386d642890d980dd632637161400`. All runtime source, resources, bundled assets, manifest, NOTICE, license and build inputs remain identical to the garden source used for this tested binary; subsequent changes document the evidence and add gallery images.
 
-The four scenes are three licensed recordings and a separate original animated sunrise garden. Garden uses a 1672x 941 original plate rendered with independently moving water, foam, pond, mist and local foliage to a 1920x1080/30 fps loop. It is not recorded footage or native 4K detail. See [media provenance](MEDIA.md) and [garden](GARDEN.md).
+The four scenes are three licensed recordings and a separate original animated sunrise garden. Garden uses a 1672x941 original plate rendered with independently moving water, foam, pond, mist and local foliage to a 1920x1080/30 fps loop. It is not recorded footage or native 4K detail. See [media provenance](MEDIA.md) and [garden](GARDEN.md).
 
 ## Physical Fire TV
 
@@ -44,7 +44,7 @@ Every decoded frame was nonempty. Changed-frame counts are reduced-frame diagnos
 
 ## Browser and host checks
 
-The public 18-image garden feature gallery passed actual desktop 1280 and mobile 320 inspection, with every image loaded and no horizontal overflow. The release gallery adds two final physical captures. Its final public gallery check must cover the resulting 21-image table. Automatic light/dark desktop/mobile motion and reduced-motion banner cases passed; manual GitHub single-theme account settings and a continuously observed full banner loop remain unverified.
+The final public 21-image release gallery passed actual desktop 1280 and mobile 320 inspection, with every image loaded at 1920x1080 and no horizontal overflow. Its first row shows the final physical daylight Preview and night Dream captures alongside the native wide garden view. Automatic light/dark desktop/mobile motion and reduced-motion banner cases passed; manual GitHub single-theme account settings and a continuously observed full banner loop remain unverified.
 
 Java settings logic and the installer each enforce 100 percent line and branch coverage. The corrected Java gate uses COVEREDRATIO 1.0 and formats actual source files from the project root. Android framework, decoder, graphics and lifecycle are explicitly outside host coverage and require native checks.
 

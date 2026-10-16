@@ -129,7 +129,7 @@ The first row includes the exact final production APK on a physical AFTDEC012E F
   </tr>
 </table>
 
-The garden also has actual native [night grading](art/screenshots/garden-night-heavy-slow.png) and [DreamService](art/screenshots/dream-garden.png) captures. Recorded-scene captures retain their original per-image APK provenance because their videos, shader and renderer are unchanged. Garden and refreshed settings/credits captures use the four-scene candidate. See [garden artwork and verification](docs/GARDEN.md).
+The garden also has actual native [night grading](art/screenshots/garden-night-heavy-slow.png) and [DreamService](art/screenshots/dream-garden.png) captures. Recorded-scene captures retain their original per-image APK provenance because their videos, shader and renderer are unchanged. Garden and refreshed settings/credits captures use the four-scene production build. See [garden artwork and verification](docs/GARDEN.md).
 
 ## Building and testing
 

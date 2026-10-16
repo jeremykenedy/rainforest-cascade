@@ -28,7 +28,7 @@ live schema rather than inventing additional options.
 
 The production certificate SHA-256 remains
 `4818ad1fb9c91392b47d28fb84113640dfdc386d642890d980dd632637161400`.
-The exact signed candidate and native-capture builds are distinguished in
+The exact signed production APK and native-capture builds are distinguished in
 [verification](VERIFICATION.md). The native preview source is
 `art/screenshots/forest-balanced.png`, 1920x1080, with its JPEG derivative bundled
 as `res/drawable-nodpi/screensaver_preview.jpg`. Native screenshot hashes and

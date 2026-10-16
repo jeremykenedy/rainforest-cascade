@@ -1,53 +1,55 @@
 # Verification
 
-## Four-scene garden candidate
+## Production 1.1.0 artifact
 
-The separate four-scene candidate was tested on the same API 34 Google TV emulator at 1920x1080. Its signed APK SHA-256 is `88602f840deae1e9a7fa8de5b1dda03601c70d0d70399ab11262e1817e7de31f` (72,053,957 bytes). The three recorded video files, shader and renderer remain unchanged. Garden is original rendered artwork; see [garden provenance, controls and verification](GARDEN.md).
+The exact signed APK is 72,053,957 bytes with SHA-256 `88602f840deae1e9a7fa8de5b1dda03601c70d0d70399ab11262e1817e7de31f`. Its production signing certificate remains `4818ad1fb9c91392b47d28fb84113640dfdc386d642890d980dd632637161400`. All runtime source, resources, bundled assets, manifest, NOTICE, license and build inputs remain identical to the garden source used for this tested binary; subsequent changes document the evidence and add gallery images.
 
-Actual native checks cover all garden framings, effects, night grading and fast playback, remote Down then Select to Preview and Back to settings, offline credits, and a bound nonpersistent test-Dream followed by Back. The native motion recording runs for 33.514 seconds after a 40-second settle. All seven prior preferences and seven system values were compared and restored exactly, including the selected Reel Atrium Dream and enabled value. The app was stopped and Home restored. Physical moving review, sustained performance, idle activation, sleep/wake and final release remain pending.
+The four scenes are three licensed recordings and a separate original animated sunrise garden. Garden uses a 1672x 941 original plate rendered with independently moving water, foam, pond, mist and local foliage to a 1920x1080/30 fps loop. It is not recorded footage or native 4K detail. See [media provenance](MEDIA.md) and [garden](GARDEN.md).
 
-The first test incorrectly expected immediate Select to launch Preview while the ScrollView held initial focus. That assertion stopped the harness and its finally block restored state. A corrected test verified the actual Down then Select path against fresh XML showing the focused Preview button; no navigation source change was needed.
+## Physical Fire TV
 
-## Three-recording 1.1.0 emulator candidate
+| Field | Actual result |
+| --- | --- |
+| Device | Physical AFTDEC012E, API 30; Fire OS build not refreshed |
+| Capture | 1920x1080; native 4K composition not claimed |
+| Update | Same-package, same-signer update retained all seven prior preferences |
+| Remote route | Settings, Down then Select on Preview, then Back to settings |
+| Playback | Garden daylight after 40-second settle, 33.588-second recording |
+| Dream | Actual bound WaterfallDreamService, mCurrentDreamIsTest=true and mBound=true, night garden; Back cleared it |
+| Moving review | Normal QuickTime playback 0 to 34 seconds and 13 to 34 seconds observed changing water, foam, pond and mist, without an abrupt jump |
+| Restoration | All seven app preferences and five system values exact; prior asleep state restored |
 
-On October 16, 2026, the signed candidate was installed on the shared Google TV/Android TV emulator, API 34, serial `emulator-5580`, with a 1920x1080 output surface. The tested APK SHA-256 is `678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9` (50,123,900 bytes).
+Physical screenshot hashes and capture timestamps are in [physical provenance](../art/screenshots/physical-provenance.json). The [daylight image](../art/screenshots/fire-tv-garden-day.png) shows the actual running Preview. The [night image](../art/screenshots/fire-tv-garden-night-dream.png) shows the actual test-Dream.
 
-After a 40-second settle, native captures cover all three environments at wide, balanced and close framing, added mist and sunlight, cool night grading, slow and fast playback, readable remote settings, and offline credits scrolled into the full Apache application license. Screenshot provenance is in [`art/screenshots/provenance.json`](../art/screenshots/provenance.json). Framing preserves water and rock proportions; it changes camera crop rather than physical waterfall width.
+The five restored system values cover selected DreamService, enabled state, sleep timeout, screen-off timeout and auto-wake setting. The test did not persistently select Rainforest Cascade as the user's default Dream. A short SurfaceFlinger sample had 125 valid buffer presents at approximately 43.26 buffer presents per second, with a median 16.703-millisecond interval. This measures compositor buffer presents, not 30 fps source video decoding, sustained renderer FPS, heat or power.
 
-The actual `WaterfallDreamService` was bound through the emulator's nonpersistent test-Dream route. Dream-manager output identifies the service, `isPreview=true` and `mBound=true`; Back exited it. This exercises the real service but does not prove physical TV idle activation. All seven prior preference values were restored. The selected Reel Atrium component and enabled value `1` remained unchanged, and the app was stopped before returning Home.
+A harness initially compared the Preview button text with different letter case from the native uppercase label. The case-insensitive check verified the actual remote route; no application navigation change was needed.
 
-| Native recording | Actual duration | Decoded compositor frames | Changed adjacent frames |
+## API 34 Google TV emulator
+
+The exact four-scene APK was tested at 1920x1080 on emulator-5580. Native captures cover all garden framings, added effects, night grading, fast playback, remote Down then Select to Preview and Back, credits scrolled into the full Apache license, and a bound nonpersistent test-Dream with Back. A 33.514-second recording crosses two 16-second source loop boundaries after a 40-second settle. All seven app preferences and seven sampled system values were restored, including the previously selected Reel Atrium service and enabled state. The app was stopped and Home restored.
+
+Three-recording checks used APK `678f64b4d14b7f85de42e047eef04138818f6a8dc0c97c15e954141f6fc314b9`. Those videos, shader and renderer are byte-identical in the four-scene release. All three environments were captured at wide, balanced and close framing, with separate mist, sunlight, night and playback-speed checks. Per-image build hashes are preserved in [native provenance](../art/screenshots/provenance.json).
+
+| Native recording | Duration | Decoded compositor frames | Changed adjacent frames |
 | --- | --- | --- | --- |
-| Forest, balanced | 20.635 s | 957 | 641 |
-| Mossy stone, balanced | 20.715 s | 928 | 687 |
-| Snowy canyon, balanced | 10.768 s | 388 | 328 |
-| Slow playback with night/mist | 4.022 s | 147 | 87 |
-| Fast daylight playback | 4.449 s | 148 | 138 |
+| Forest, balanced |20.635s |957 |641 |
+| Mossy stone, balanced |20.715s |928 |687 |
+| Snowy canyon, balanced |10.768s |388 |328 |
+| Slow playback with night/mist |4.022s |147 |87 |
+| Fast daylight |4.449s |148 |138 |
+| Garden, wide |33.514s |1495 |1064 |
 
-Every decoded native frame was nonempty. Changed-frame counts use a mean channel difference above 0.02 on reduced diagnostic frames. The three source loops decode completely and their boundary changes are comparable to ordinary frame changes. These statistics support moving review and are not renderer FPS measurements. The emulator logged an unsupported `eglQueryContext` attribute during surface setup; the native images and playback continued. Physical decoder/GPU behavior and sustained performance still require hardware verification.
+Every decoded frame was nonempty. Changed-frame counts are reduced-frame diagnostics, not renderer FPS. All source loops decode completely. The emulator logged an unsupported eglQueryContext attribute during surface setup while playback continued; physical final playback is separately established above.
 
-The final signed candidate SHA-256 is `ba2a3695bc45fe66fd8ab136e7f9a4e5fef7cb5f4d7aa9369057c31d7f35fd47` (50,947,205 bytes). Its classes, shader, three videos and application license are byte-identical to the native-tested APK. The only attribution change removes a trailing blank line. The final embedded screensaver preview is refreshed from the actual native forest capture. Its source image is separate from the continuously moving video used by the renderer.
+## Browser and host checks
 
-## Historical 1.0 physical Fire TV preview
+The public 18-image garden feature gallery passed actual desktop 1280 and mobile 320 inspection, with every image loaded and no horizontal overflow. The release gallery adds two final physical captures. Its final public gallery check must cover the resulting 21-image table. Automatic light/dark desktop/mobile motion and reduced-motion banner cases passed; manual GitHub single-theme account settings and a continuously observed full banner loop remain unverified.
 
-- Device: Amazon Fire TV Stick 4K Max, model AFTDEC012E
-- Android API reported by the earlier record: 30
-- Fire OS build: not refreshed for this candidate
-- Connection: ADB over the local network
-- Screen: TV panel reports 3840x2160; Android logical output is validated separately and no native 4K composition claim is made
-- Screensaver component before and after test: `com.androsaver/.ScreensaverService`
-- Screensaver enabled before and after test: `1`
+Java settings logic and the installer each enforce 100 percent line and branch coverage. The corrected Java gate uses COVEREDRATIO 1.0 and formats actual source files from the project root. Android framework, decoder, graphics and lifecycle are explicitly outside host coverage and require native checks.
 
-The app installed successfully and its preview and remote-operated settings screens were exercised on this device. The day and night screenshots show the running preview activity. Fire OS does not expose the Android Dream manager service or a supported shell command to start a selected DreamService (`cmd dream help` reports `Can't find service: dream`). A five-minute idle test continued to run the pre-existing Androsaver service, so the `WaterfallDreamService` lifecycle could not be verified on this Fire TV. The original screensaver component and enabled state were restored. The app service is registered in the package manager with the required bind permission.
+## Limits and other devices
 
-| Platform | Device | Result |
-| --- | --- | --- |
-| Fire TV DreamService activation | AFTDEC012E, historical API 30 record | Not verified. We are looking for a Fire TV owner to confirm DreamService selection and idle activation, then report the model, Fire OS/API, resolution, and results in the [issue tracker](https://github.com/jeremykenedy/rainforest-cascade/issues). Preview and settings were tested on this device. |
-| Physical Android TV | Not tested for this release | We are looking for an Android TV owner to test installation, screensaver selection and activation, and remote settings, then report the model, OS/API, resolution, and results in the [issue tracker](https://github.com/jeremykenedy/rainforest-cascade/issues). |
-| Physical Google TV | Not tested for this release | We are looking for a Google TV owner to run the same checks and report the model, OS/API, resolution, and results in the [issue tracker](https://github.com/jeremykenedy/rainforest-cascade/issues). |
+Explicit test-Dream and Preview do not establish automatic idle activation, reboot persistence or sleep/wake behavior across vendor settings. Sustained temperature, idle power, long-duration memory and all scene/control combinations on physical hardware remain unverified. Full-scene drift does not guarantee prevention of image retention.
 
-## Current candidate limits
-
-The 1.1.0 candidates use 1920x1080/30 fps recorded and rendered video decoded into OpenGL ES 2.0. Source frame rate and recorded emulator compositor frame counts do not prove sustained renderer or physical display frame rate. Long-duration temperature, idle power, hardware decoder behavior and burn-in protection have not been measured on a physical TV. Current physical idle activation, sleep/wake and remote return paths remain pending.
-
-Host coverage is 100% line and branch for the option resolver and settings validator. The corrected gate enforces COVEREDRATIO 1.0 and formatting checks actual Java files from the project root. Framework, decoder, graphics and lifecycle code require native verification and are outside host coverage.
+Physical Android TV and Google TV devices were unavailable. Owners of those devices can test installation, Dream selection/idle activation and remote navigation, then report model, OS/API, resolution, settings and results through the [issue tracker](https://github.com/jeremykenedy/rainforest-cascade/issues). The historical 1.0 physical preview was a different Canvas renderer and does not establish current performance.

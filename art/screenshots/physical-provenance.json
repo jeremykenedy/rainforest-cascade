@@ -1,0 +1,36 @@
+{
+  "captures": [
+    {
+      "file": "art/screenshots/fire-tv-garden-day.png",
+      "sha256": "214dd8d65d6c5380de0ef96b29686b13c73e309d62d38df08f0c1a9516365c29",
+      "captured_at_utc": "2026-10-16T11:06:50.486325+00:00",
+      "capture_timestamp_source": "original capture file modification time",
+      "device": "physical AFTDEC012E",
+      "api": 30,
+      "width": 1920,
+      "height": 1080,
+      "route": "remote Settings to Preview",
+      "apk_sha256": "88602f840deae1e9a7fa8de5b1dda03601c70d0d70399ab11262e1817e7de31f",
+      "scene": "Original rendered sunrise flower garden",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "art/screenshots/fire-tv-garden-night-dream.png",
+      "sha256": "22839c2afaa064c6b20ee6d8fd38d04bdc96948ba98cd5a549a4259627e2aa3c",
+      "captured_at_utc": "2026-10-16T11:08:13.992676+00:00",
+      "capture_timestamp_source": "original capture file modification time",
+      "device": "physical AFTDEC012E",
+      "api": 30,
+      "width": 1920,
+      "height": 1080,
+      "route": "actual nonpersistent WaterfallDreamService test-Dream",
+      "apk_sha256": "88602f840deae1e9a7fa8de5b1dda03601c70d0d70399ab11262e1817e7de31f",
+      "scene": "Original rendered sunrise flower garden",
+      "license": "Apache-2.0"
+    }
+  ],
+  "moving_recording_seconds": 33.587533,
+  "review": "Parent normal QuickTime playback0to34 and13to34 accepted visible water/foam/pond/mist changes and no abrupt observed jump",
+  "restoration": "All7app preferences and5systemkeys exact; prior asleep state restored",
+  "limits": "SurfaceFlinger43.26bufferpresents/s sample is not30fps decoded-video evidence or sustained performance"
+}

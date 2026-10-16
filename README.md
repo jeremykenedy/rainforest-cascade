@@ -41,7 +41,7 @@ The app has no ads, analytics, telemetry, diagnostics, crash reporting, or track
 
 ## Features
 
-The 1.1.0 source candidate replaces the original painted waterfall. Emulator checks cover the current candidate; physical TV verification remains pending. The latest published release still uses the earlier Canvas renderer.
+The 1.1.0 build replaces the original painted waterfall. Native checks cover all four scenes on API 34; the exact signed production build also passed remote Preview, moving garden playback and an actual night test-Dream with Back on a physical AFTDEC012E Fire TV. See [verification](docs/VERIFICATION.md) for the artifact and limits.
 
 - Three licensed real moving environments: a wooded cascade, mossy stone falls and a snowy canyon waterfall.
 - A separate original sunrise flower garden with animated falling water, pond ripples, mist and foreground foliage. This is rendered artwork, not recorded footage.
@@ -55,7 +55,7 @@ The 1.1.0 source candidate replaces the original painted waterfall. Emulator che
 
 Android API 23 or newer, OpenGL ES 2.0 and H.264 decoding are required. The project targets API 36. The replacement uses 1920x1080 recorded and rendered scenes; a 4K panel or higher-resolution original source does not establish native 4K composition.
 
-Current native results and the historical Fire TV preview run are distinguished in [device verification](docs/VERIFICATION.md). Physical Fire TV idle activation and sustained replacement-renderer performance remain pending.
+Current native and physical results are distinguished in [device verification](docs/VERIFICATION.md). Automatic idle activation across vendor configurations and sustained thermal/power behavior remain unverified.
 
 ## Installation
 
@@ -84,13 +84,18 @@ screensaver --set=rainforest-cascade
 firetv-screensavers --uninstall=rainforest-cascade --force
 ```
 
-Repeat the install command to update the existing package. This downloads the latest published release, which remains the original renderer until the replacement release gate passes. Toolkit also manages supported launcher choices, sleep/screensaver timers and settings safeguards. Visual choices live in this app. Fire TV UI discovers installed dreams and provides its documented preview and settings integration.
+Repeat the install command to update the existing package. This downloads the latest stable published release. Toolkit also manages supported launcher choices, sleep/screensaver timers and settings safeguards. Visual choices live in this app. Fire TV UI discovers installed dreams and provides its documented preview and settings integration.
 
 ## Screenshots
 
-Current candidate captures come from the actual Android TV/Google TV emulator at API 34 and a 1920x1080 output surface. The first three scene rows and the final garden row compare wide, balanced and close framing. They establish native rendering and controls, not physical TV idle activation or performance. Scene screenshots retain the corresponding [footage licenses](docs/MEDIA.md).
+The first row includes the exact final production APK on a physical AFTDEC012E Fire TV in daylight Preview and a bound night DreamService, followed by its wide emulator garden view. Remaining native captures show framing, effects and remote controls on API 34. All captures are 1920x1080; scene screenshots retain the corresponding [media licenses](docs/MEDIA.md).
 
 <table>
+  <tr>
+    <td width="33%"><img src="art/screenshots/fire-tv-garden-day.png" alt="Original sunrise flower garden running on physical Fire TV" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/fire-tv-garden-night-dream.png" alt="Cool night garden through actual bound DreamService on physical Fire TV" width="100%"></td>
+    <td width="33%"><img src="art/screenshots/garden-wide-view.png" alt="Wide sunrise garden through the API34 native preview" width="100%"></td>
+  </tr>
   <tr>
     <td width="33%"><img src="art/screenshots/forest-wide-view.png" alt="Wooded cascade, wide view, actual native Android TV preview" width="100%"></td>
     <td width="33%"><img src="art/screenshots/forest-balanced.png" alt="Wooded cascade, balanced framing, actual native Android TV preview" width="100%"></td>
@@ -158,6 +163,8 @@ The Java coverage gate is 100% line and branch coverage for the project-owned se
 - [Troubleshooting](docs/TROUBLESHOOTING.md)
 - [Verification and device results](docs/VERIFICATION.md)
 - [Version 1.0.0 release notes](docs/releases/v1.0.0.md)
+
+See [1.1.0 upgrade and release details](docs/releases/v1.1.0.md).
 
 ## Changelog
 
